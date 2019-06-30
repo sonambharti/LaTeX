@@ -1,0 +1,57 @@
+\documentclass[12pt,a5 paper]{article}
+\usepackage{amsmath}
+\usepackage{cclicenses}
+\title{Program on Writing Equations}
+\author{SONAM BHARTI \\ Nalanda College of Engineering,\\ CHANDI \\ \byncsa}
+\date{28 June 2019}
+
+\begin{document}
+\maketitle
+\newpage
+We will demonstrate the creation of equations with some samples.  Let
+us start with the model of an inverted pendulum: 
+
+
+\begin{align}
+\frac d{dt}
+\begin{bmatrix} x_1\\x_2\\x_3\\x_4  \end{bmatrix} &  =
+\begin{bmatrix} 
+0 & 0 & 1 & 1\\
+0 & 1 & 0& 1\\
+0 & -\gamma & 0 & 0\\
+0 & \alpha & 0 & 0\\
+\end{bmatrix}
+\begin{bmatrix}x_1 \\x_2\\x_3\\x_4\end{bmatrix} +
+\begin{bmatrix}0\\0\\-\delta\\-\beta \end{bmatrix}
+\delta \mu\\
+\intertext{Proportional, Integral, derivative controller is most popular in industry.
+ It has three tuning parameters: $K$, $\tau_1$ and $\tau_d$}
+ u(t) & = K\left( e(t) + \frac 1 {\tau_1}
+\int_0^t e(t)dt +
+ \tau_d \frac {de(t)} {dt}\right )\\ 
+%
+\intertext{Let us go through the discrete equivalent of this equations :}
+u(n) - u(n-1)  & = K[e(n)-e(n-1) + \frac {T_s} {2\tau_i} \{e(n)+e(n-1)\} \nonumber \\
+& + \frac {\tau_a} {T_s} \{e(n) - 2e(n-1)+e(n-2)\}]
+\end{align}
+\end{document}
+
+
+
+
+
+\section{this is the second section}                                                                                                    //distribute the section
+
+\intertext{Let us go through the discrete equivalent of this equations :}\\                                            //insert text in between the equations
+u(n) - u(n-1)  & = K[e(n)-e(n-1) + \frac {T_s} {2\tau_i} \{e(n)+e(n-1)\} \nonumber \\                       //nonumber is used either to ignore the numbering when equation is in 2 part or while we don't have the need for numbering
+& + \frac {\tau_a} {T_s} \{e(n) - 2e(n-1)+e(n-2)\}]
+
+
+\section{This is the fist section}
+\label{sec:100}
+
+
+\label{eq:GFG}\\ \\
+
+We will now discretise the PID controller given in equation \ref{eq:GFG}.
+Section \ref{sec:100} shows how to write equations.\\
